@@ -44,6 +44,8 @@ public class JsonUtils {
     MAPPER.setVisibility(PropertyAccessor.IS_GETTER, JsonAutoDetect.Visibility.NONE);
     MAPPER.setVisibility(PropertyAccessor.SETTER, JsonAutoDetect.Visibility.NONE);
     MAPPER.setVisibility(PropertyAccessor.CREATOR, JsonAutoDetect.Visibility.NONE);
+
+    MAPPER.registerModule(new JavaTimeModule());
   }
 
   public static ObjectMapper getObjectMapper() {
